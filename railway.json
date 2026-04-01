@@ -5,7 +5,8 @@
   "startCommand": "npm start",
   "variables": {
     "USABILITY_METRICS_MF_URI": "${{ UsabilityMetrics-MF.RAILWAY_PUBLIC_DOMAIN }}",
-    "MF_CONTAINERS_URI": "${{ UsabilityMetrics-MF.RAILWAY_PUBLIC_DOMAIN }}"
+    "MF_CONTAINERS_URI": "${{ UsabilityMetrics-MF.RAILWAY_PUBLIC_DOMAIN }}",
+    "VITE_BYPASS_AUTH": "true"
   },
   "ports": [
     {
