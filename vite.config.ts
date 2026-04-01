@@ -43,8 +43,16 @@ export default defineConfig(({ mode }) => {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
       },
     },
-    server: { port: +env.APP_PORT, strictPort: true },
-    preview: { port: +env.APP_PORT, strictPort: true },
+    server: {
+      port: +env.APP_PORT,
+      strictPort: true,
+      allowedHosts: ['cmpc-shell-production.up.railway.app', 'localhost'],
+    },
+    preview: {
+      port: +env.APP_PORT,
+      strictPort: true,
+      allowedHosts: ['cmpc-shell-production.up.railway.app', 'localhost'],
+    },
     build: { target: 'esnext' },
   };
 });
