@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supply Backoffice</title>
+  </head>
+  <style>
+      #startup-loader {
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #4b4848;
+          font-family: system-ui;
+      }
+
+      .startup-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 16px;
+      }
+
+      .startup-spinner {
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          border: 3px solid rgba(255,255,255,0.2);
+          border-top-color: #4e824d;
+          animation: spin 0.8s linear infinite;
+      }
+
+      @keyframes spin {
+          to { transform: rotate(360deg); }
+      }
+  </style>
+  <body>
+    <div id="root">
+      <div id="startup-loader">
+        <div class="startup-container">
+          <div class="startup-spinner"></div>
+          <p>Inicializando plataforma...</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

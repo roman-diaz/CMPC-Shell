@@ -1,0 +1,534 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "superadmin@cmpc.com",
+      "password": "1234",
+      "role": "superadmin",
+      "token": "tok_superadmin_1"
+    },
+    {
+      "id": 2,
+      "email": "admin@cmpc.com",
+      "password": "1234",
+      "role": "admin",
+      "token": "tok_admin_2"
+    },
+    {
+      "id": 3,
+      "email": "user@cmpc.com",
+      "password": "1234",
+      "role": "user",
+      "token": "tok_user_3"
+    }
+  ],
+
+  "bookingBls": [
+    {
+      "id": 2001,
+      "reference": "BL-CMPC-2001",
+      "ownerUserId": 3,
+      "createdAt": "2025-01-10T10:00:00.000Z",
+      "updatedAt": "2025-01-12T09:15:00.000Z"
+    },
+    {
+      "id": 2002,
+      "reference": "BL-CMPC-2002",
+      "ownerUserId": 3,
+      "createdAt": "2025-01-11T14:30:00.000Z",
+      "updatedAt": "2025-01-13T16:40:00.000Z"
+    },
+    {
+      "id": 2003,
+      "reference": "BL-CMPC-2003",
+      "ownerUserId": 2,
+      "createdAt": "2025-01-12T08:20:00.000Z",
+      "updatedAt": "2025-01-14T11:05:00.000Z"
+    },
+    {
+      "id": 2004,
+      "reference": "BL-CMPC-2004",
+      "ownerUserId": 1,
+      "createdAt": "2025-01-13T09:00:00.000Z",
+      "updatedAt": "2025-01-15T10:00:00.000Z"
+    }
+  ],
+
+  "bookingBlEvents": {
+    "data": [
+      {
+        "businessUnit": "104",
+        "business": "Boxboard",
+        "status": { "id": 1, "name": "InOrigin" },
+        "booking": "EKB100001",
+        "bl": "YTR100001",
+        "containerCount": 10,
+        "notifiedMilestonesCount": 3,
+        "pendingMilestonesCount": 5,
+        "lastMilestoneNotified": "2024-06-15T10:30:00Z"
+      },
+      {
+        "businessUnit": "105",
+        "business": "Pulpa",
+        "status": { "id": 2, "name": "InTransit" },
+        "booking": "EKB100002",
+        "bl": "YTR100002",
+        "containerCount": 8,
+        "notifiedMilestonesCount": 4,
+        "pendingMilestonesCount": 3,
+        "lastMilestoneNotified": "2024-06-16T11:00:00Z"
+      },
+      {
+        "businessUnit": "106",
+        "business": "Sin asignar",
+        "status": { "id": 3, "name": "AtDestination" },
+        "booking": "EKB100003",
+        "bl": "YTR100003",
+        "containerCount": 12,
+        "notifiedMilestonesCount": 6,
+        "pendingMilestonesCount": 2,
+        "lastMilestoneNotified": "2024-06-17T09:45:00Z"
+      },
+      {
+        "businessUnit": "107",
+        "business": "Boxboard",
+        "status": { "id": 1, "name": "InOrigin" },
+        "booking": "EKB100004",
+        "bl": "YTR100004",
+        "containerCount": 15,
+        "notifiedMilestonesCount": 5,
+        "pendingMilestonesCount": 4,
+        "lastMilestoneNotified": "2024-06-18T08:20:00Z"
+      },
+      {
+        "businessUnit": "108",
+        "business": "Pulpa",
+        "status": { "id": 2, "name": "InTransit" },
+        "booking": "EKB100005",
+        "bl": "YTR100005",
+        "containerCount": 9,
+        "notifiedMilestonesCount": 2,
+        "pendingMilestonesCount": 6,
+        "lastMilestoneNotified": "2024-06-19T13:10:00Z"
+      },
+      {
+        "businessUnit": "104",
+        "business": "Boxboard",
+        "status": { "id": 3, "name": "AtDestination" },
+        "booking": "EKB100006",
+        "bl": "YTR100006",
+        "containerCount": 11,
+        "notifiedMilestonesCount": 7,
+        "pendingMilestonesCount": 1,
+        "lastMilestoneNotified": "2024-06-20T14:30:00Z"
+      },
+      {
+        "businessUnit": "105",
+        "business": "Pulpa",
+        "status": { "id": 1, "name": "InOrigin" },
+        "booking": "EKB100007",
+        "bl": "YTR100007",
+        "containerCount": 6,
+        "notifiedMilestonesCount": 1,
+        "pendingMilestonesCount": 7,
+        "lastMilestoneNotified": "2024-06-21T07:50:00Z"
+      },
+      {
+        "businessUnit": "106",
+        "business": "Sin asignar",
+        "status": { "id": 2, "name": "InTransit" },
+        "booking": "EKB100008",
+        "bl": "YTR100008",
+        "containerCount": 14,
+        "notifiedMilestonesCount": 5,
+        "pendingMilestonesCount": 3,
+        "lastMilestoneNotified": "2024-06-22T16:40:00Z"
+      },
+      {
+        "businessUnit": "107",
+        "business": "Boxboard",
+        "status": { "id": 3, "name": "AtDestination" },
+        "booking": "EKB100009",
+        "bl": "YTR100009",
+        "containerCount": 13,
+        "notifiedMilestonesCount": 8,
+        "pendingMilestonesCount": 1,
+        "lastMilestoneNotified": "2024-06-23T12:00:00Z"
+      },
+      {
+        "businessUnit": "108",
+        "business": "Pulpa",
+        "status": { "id": 1, "name": "InOrigin" },
+        "booking": "EKB100010",
+        "bl": "YTR100010",
+        "containerCount": 7,
+        "notifiedMilestonesCount": 2,
+        "pendingMilestonesCount": 5,
+        "lastMilestoneNotified": "2024-06-24T09:10:00Z"
+      },
+      {
+        "businessUnit": "104",
+        "business": "Boxboard",
+        "status": { "id": 2, "name": "InTransit" },
+        "booking": "EKB100011",
+        "bl": "YTR100011",
+        "containerCount": 10,
+        "notifiedMilestonesCount": 4,
+        "pendingMilestonesCount": 4,
+        "lastMilestoneNotified": "2024-06-25T15:20:00Z"
+      },
+      {
+        "businessUnit": "105",
+        "business": "Pulpa",
+        "status": { "id": 3, "name": "AtDestination" },
+        "booking": "EKB100012",
+        "bl": "YTR100012",
+        "containerCount": 12,
+        "notifiedMilestonesCount": 6,
+        "pendingMilestonesCount": 2,
+        "lastMilestoneNotified": "2024-06-26T10:45:00Z"
+      },
+      {
+        "businessUnit": "106",
+        "business": "Sin asignar",
+        "status": { "id": 1, "name": "InOrigin" },
+        "booking": "EKB100013",
+        "bl": "YTR100013",
+        "containerCount": 5,
+        "notifiedMilestonesCount": 1,
+        "pendingMilestonesCount": 6,
+        "lastMilestoneNotified": "2024-06-27T08:30:00Z"
+      },
+      {
+        "businessUnit": "107",
+        "business": "Boxboard",
+        "status": { "id": 2, "name": "InTransit" },
+        "booking": "EKB100014",
+        "bl": "YTR100014",
+        "containerCount": 16,
+        "notifiedMilestonesCount": 7,
+        "pendingMilestonesCount": 3,
+        "lastMilestoneNotified": "2024-06-28T17:10:00Z"
+      },
+      {
+        "businessUnit": "108",
+        "business": "Pulpa",
+        "status": { "id": 3, "name": "AtDestination" },
+        "booking": "EKB100015",
+        "bl": "YTR100015",
+        "containerCount": 9,
+        "notifiedMilestonesCount": 5,
+        "pendingMilestonesCount": 2,
+        "lastMilestoneNotified": "2024-06-29T11:00:00Z"
+      },
+      {
+        "businessUnit": "104",
+        "business": "Boxboard",
+        "status": { "id": 1, "name": "InOrigin" },
+        "booking": "EKB100016",
+        "bl": "YTR100016",
+        "containerCount": 11,
+        "notifiedMilestonesCount": 3,
+        "pendingMilestonesCount": 4,
+        "lastMilestoneNotified": "2024-06-30T14:00:00Z"
+      },
+      {
+        "businessUnit": "105",
+        "business": "Pulpa",
+        "status": { "id": 2, "name": "InTransit" },
+        "booking": "EKB100017",
+        "bl": "YTR100017",
+        "containerCount": 8,
+        "notifiedMilestonesCount": 4,
+        "pendingMilestonesCount": 3,
+        "lastMilestoneNotified": "2024-07-01T09:30:00Z"
+      },
+      {
+        "businessUnit": "106",
+        "business": "Sin asignar",
+        "status": { "id": 3, "name": "AtDestination" },
+        "booking": "EKB100018",
+        "bl": "YTR100018",
+        "containerCount": 14,
+        "notifiedMilestonesCount": 6,
+        "pendingMilestonesCount": 1,
+        "lastMilestoneNotified": "2024-07-02T13:45:00Z"
+      },
+      {
+        "businessUnit": "104",
+        "business": "Boxboard",
+        "status": { "id": 4, "name": "Completed" },
+        "booking": "EKB200001",
+        "bl": "YTR200001",
+        "containerCount": 12,
+        "notifiedMilestonesCount": 5,
+        "pendingMilestonesCount": 5,
+        "lastMilestoneNotified": "2024-09-10T14:20:00Z"
+      },
+      {
+        "businessUnit": "104",
+        "business": "Boxboard",
+        "status": { "id": 4, "name": "Completed" },
+        "booking": "EKB200002",
+        "bl": "YTR200002",
+        "containerCount": 8,
+        "notifiedMilestonesCount": 6,
+        "pendingMilestonesCount": 6,
+        "lastMilestoneNotified": "2024-10-03T08:05:00Z"
+      },
+      {
+        "businessUnit": "104",
+        "business": "Boxboard",
+        "status": { "id": 4, "name": "Completed" },
+        "booking": "EKB200003",
+        "bl": "YTR200003",
+        "containerCount": 20,
+        "notifiedMilestonesCount": 10,
+        "pendingMilestonesCount": 10,
+        "lastMilestoneNotified": "2024-11-21T18:45:00Z"
+      },
+      {
+        "businessUnit": "104",
+        "business": "Boxboard",
+        "status": { "id": 4, "name": "Completed" },
+        "booking": "EKB200004",
+        "bl": "YTR200004",
+        "containerCount": 15,
+        "notifiedMilestonesCount": 7,
+        "pendingMilestonesCount": 7,
+        "lastMilestoneNotified": "2024-12-01T11:12:00Z"
+      },
+      {
+        "businessUnit": "104",
+        "business": "Boxboard",
+        "status": { "id": 4, "name": "Completed" },
+        "booking": "EKB200005",
+        "bl": "YTR200005",
+        "containerCount": 6,
+        "notifiedMilestonesCount": 4,
+        "pendingMilestonesCount": 4,
+        "lastMilestoneNotified": "2025-01-05T09:30:00Z"
+      },
+      {
+        "businessUnit": "107",
+        "business": "Boxboard",
+        "status": { "id": 1, "name": "InOrigin" },
+        "booking": "EKB100019",
+        "bl": "YTR100019",
+        "containerCount": 6,
+        "notifiedMilestonesCount": 2,
+        "pendingMilestonesCount": 5,
+        "lastMilestoneNotified": "2024-07-03T08:10:00Z"
+      },
+      {
+        "businessUnit": "108",
+        "business": "Pulpa",
+        "status": { "id": 2, "name": "InTransit" },
+        "booking": "EKB100020",
+        "bl": "YTR100020",
+        "containerCount": 15,
+        "notifiedMilestonesCount": 7,
+        "pendingMilestonesCount": 2,
+        "lastMilestoneNotified": "2024-07-04T16:30:00Z"
+      },
+      {
+        "businessUnit": "104",
+        "business": "Boxboard",
+        "status": { "id": 3, "name": "AtDestination" },
+        "booking": "EKB100021",
+        "bl": "YTR100021",
+        "containerCount": 13,
+        "notifiedMilestonesCount": 8,
+        "pendingMilestonesCount": 1,
+        "lastMilestoneNotified": "2024-07-05T12:00:00Z"
+      },
+      {
+        "businessUnit": "105",
+        "business": "Pulpa",
+        "status": { "id": 1, "name": "InOrigin" },
+        "booking": "EKB100022",
+        "bl": "YTR100022",
+        "containerCount": 7,
+        "notifiedMilestonesCount": 2,
+        "pendingMilestonesCount": 4,
+        "lastMilestoneNotified": "2024-07-06T09:20:00Z"
+      },
+      {
+        "businessUnit": "106",
+        "business": "Sin asignar",
+        "status": { "id": 2, "name": "InTransit" },
+        "booking": "EKB100023",
+        "bl": "YTR100023",
+        "containerCount": 10,
+        "notifiedMilestonesCount": 5,
+        "pendingMilestonesCount": 3,
+        "lastMilestoneNotified": "2024-07-07T15:00:00Z"
+      },
+      {
+        "businessUnit": "107",
+        "business": "Boxboard",
+        "status": { "id": 3, "name": "AtDestination" },
+        "booking": "EKB100024",
+        "bl": "YTR100024",
+        "containerCount": 12,
+        "notifiedMilestonesCount": 6,
+        "pendingMilestonesCount": 2,
+        "lastMilestoneNotified": "2024-07-08T11:40:00Z"
+      },
+      {
+        "businessUnit": "108",
+        "business": "Pulpa",
+        "status": { "id": 1, "name": "InOrigin" },
+        "booking": "EKB100025",
+        "bl": "YTR100025",
+        "containerCount": 5,
+        "notifiedMilestonesCount": 1,
+        "pendingMilestonesCount": 6,
+        "lastMilestoneNotified": "2024-07-09T08:00:00Z"
+      },
+      {
+        "businessUnit": "104",
+        "business": "Boxboard",
+        "status": { "id": 2, "name": "InTransit" },
+        "booking": "EKB100026",
+        "bl": "YTR100026",
+        "containerCount": 14,
+        "notifiedMilestonesCount": 7,
+        "pendingMilestonesCount": 2,
+        "lastMilestoneNotified": "2024-07-10T16:10:00Z"
+      },
+      {
+        "businessUnit": "105",
+        "business": "Pulpa",
+        "status": { "id": 3, "name": "AtDestination" },
+        "booking": "EKB100027",
+        "bl": "YTR100027",
+        "containerCount": 9,
+        "notifiedMilestonesCount": 5,
+        "pendingMilestonesCount": 1,
+        "lastMilestoneNotified": "2024-07-11T12:30:00Z"
+      },
+      {
+        "businessUnit": "106",
+        "business": "Sin asignar",
+        "status": { "id": 1, "name": "InOrigin" },
+        "booking": "EKB100028",
+        "bl": "YTR100028",
+        "containerCount": 6,
+        "notifiedMilestonesCount": 2,
+        "pendingMilestonesCount": 4,
+        "lastMilestoneNotified": "2024-07-12T09:00:00Z"
+      },
+      {
+        "businessUnit": "107",
+        "business": "Boxboard",
+        "status": { "id": 2, "name": "InTransit" },
+        "booking": "EKB100029",
+        "bl": "YTR100029",
+        "containerCount": 11,
+        "notifiedMilestonesCount": 4,
+        "pendingMilestonesCount": 3,
+        "lastMilestoneNotified": "2024-07-13T14:20:00Z"
+      },
+      {
+        "businessUnit": "108",
+        "business": "Pulpa",
+        "status": { "id": 3, "name": "AtDestination" },
+        "booking": "EKB100030",
+        "bl": "YTR100030",
+        "containerCount": 13,
+        "notifiedMilestonesCount": 6,
+        "pendingMilestonesCount": 2,
+        "lastMilestoneNotified": "2024-07-14T11:10:00Z"
+      }
+    ],
+    "pagination": {
+      "page": 1,
+      "limit": 10,
+      "total": 30,
+      "totalPages": 3
+    }
+  },
+
+  "bookingBlEvidence": [
+    {
+      "id": "YTR100010",
+      "bl": "YTR100010",
+      "booking": "EKB100010",
+      "zarpe": {
+        "badge": { "status": "danger", "text": "Sin notificación" },
+        "rows": [
+          { "label": "Eventos recibidos confirmados", "value": "3/4" },
+          { "label": "Último evento confirmado", "value": "Timeline inicial" },
+          { "label": "Fecha último evento confirmado", "value": "17/01/2026, 13:04 p.m" },
+          { "label": "Fecha última notificación", "value": "-" }
+        ]
+      },
+
+      "transbordos": [
+        {
+          "title": "PE → SG",
+          "rows": [
+            {
+              "leg": "Arribo",
+              "notif": { "text": "Notificado", "ok": true },
+              "received": "3/4",
+              "lastEvent": "Buque zarpó",
+              "lastEventDate": "17/01/2026, 13:04 p.m",
+              "lastNotifDate": "-"
+            },
+            {
+              "leg": "Salida",
+              "notif": { "text": "Sin notificación", "ok": false },
+              "received": "3/4",
+              "lastEvent": "Buque zarpó",
+              "lastEventDate": "17/01/2026, 13:04 p.m",
+              "lastNotifDate": "-"
+            }
+          ]
+        },
+        {
+          "title": "SCL → AU",
+          "rows": [
+            {
+              "leg": "Arribo",
+              "notif": { "text": "Notificado", "ok": true },
+              "received": "3/4",
+              "lastEvent": "Buque zarpó",
+              "lastEventDate": "17/01/2026, 13:04 p.m",
+              "lastNotifDate": "17/01/2026, 13:04 p.m"
+            },
+            {
+              "leg": "Salida",
+              "notif": { "text": "Sin notificación", "ok": false },
+              "received": "3/4",
+              "lastEvent": "Buque zarpó",
+              "lastEventDate": "17/01/2026, 13:04 p.m",
+              "lastNotifDate": "17/01/2026, 13:04 p.m"
+            }
+          ]
+        }
+      ],
+
+      "llegada": {
+        "badge": { "status": "danger", "text": "Sin notificación" },
+        "rows": [
+          { "label": "Eventos recibidos confirmados", "value": "3/4" },
+          { "label": "Último evento confirmado", "value": "Timeline inicial" },
+          { "label": "Fecha último evento confirmado", "value": "17/01/2026, 13:04 p.m" },
+          { "label": "Fecha última notificación", "value": "-" }
+        ]
+      },
+
+      "devolucion": {
+        "badge": { "status": "danger", "text": "Sin notificación" },
+        "rows": [
+          { "label": "Eventos recibidos confirmados", "value": "3/4" },
+          { "label": "Último evento confirmado", "value": "Timeline inicial" },
+          { "label": "Fecha último evento confirmado", "value": "17/01/2026, 13:04 p.m" },
+          { "label": "Fecha última notificación", "value": "-" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-cmpc-blue: #004A99;
+  --color-cmpc-green: #78BE20;
+
+  /* Icon Danger */
+  --color-icon-danger-default: #fca5a5;
+  --color-icon-danger-secondary: #ef4444;
+  --color-icon-danger-tertiary: #b91c1c;
+  --color-icon-danger-on: #ffe4e6;
+  --color-icon-danger-on-secondary: #ffffff;
+  --color-icon-danger-on-tertiary: #fff1f2;
+
+  /* --- TEXT TOKENS --- */
+
+  /* Text Base */
+  --color-text-base-default: #ffffff;
+  --color-text-base-secondary: #d4d4d8;
+  --color-text-base-tertiary: #a1a1aa;
+
+  /* Text Disabled */
+  --color-text-disabled-default: #a1a1aa;
+  --color-text-disabled-secondary: #52525b;
+
+  /* Text Brand */
+  --color-text-brand-default: #ecfccb;
+  --color-text-brand-secondary: #65a30d;
+  --color-text-brand-tertiary: #365314;
+  --color-text-brand-on: #ffffff;
+  --color-text-brand-on-secondary: #ecfccb;
+  --color-text-brand-on-tertiary: #bef264;
+
+  /* Text Neutral */
+  --color-text-neutral-default: #e2e8f0;
+  --color-text-neutral-secondary: #64748b;
+  --color-text-neutral-tertiary: #94a3b8;
+  --color-text-neutral-on: #f8fafc;
+  --color-text-neutral-on-secondary: #f1f5f9;
+  --color-text-neutral-on-tertiary: #e2e8f0;
+
+  /* Text Danger */
+  --color-text-danger-default: #ef4444;
+  --color-text-danger-secondary: #dc2626;
+  --color-text-danger-tertiary: #991b1b;
+  --color-text-danger-on: #fee2e2;
+  --color-text-danger-on-secondary: #fef2f2;
+  --color-text-danger-on-tertiary: #ffffff;
+
+  /* Text Warning */
+  --color-text-warning-default: #fdba74;
+  --color-text-warning-secondary: #f97316;
+  --color-text-warning-tertiary: #b45309;
+  --color-text-warning-on: #ffedd5;
+  --color-text-warning-on-secondary: #fff7ed;
+  --color-text-warning-on-tertiary: #ffffff;
+
+  /* Text Success */
+  --color-text-success-default: #3f6212;
+  --color-text-success-secondary: #84cc16;
+  --color-text-success-tertiary: #1a2e05;
+  --color-text-success-on: #d9f99d;
+  --color-text-success-on-secondary: #ecfccb;
+  --color-text-success-on-tertiary: #f7fee7;
+
+  /* Base Tokens (Dark) */
+  --color-base-default: #1e1e1e;
+  --color-base-hover: #2a2a2a;
+  --color-base-secondary: #333333;
+  --color-base-secondary-hover: #3f3f3f;
+  --color-base-tertiary: #4d4d4d;
+  --color-base-tertiary-hover: #5e5e5e;
+
+  /* Disabled Token */
+  --color-disabled-default: #3f3f46;
+
+  /* Brand Tokens (Lime Green) */
+  --color-brand-default: #84cc16;
+  /* lime-500 */
+  --color-brand-hover: #65a30d;
+  /* lime-600 */
+  --color-brand-secondary: #a3e635;
+  /* lime-400 */
+  --color-brand-secondary-hover: #bef264;
+  /* lime-300 */
+  --color-brand-tertiary: #d9f99d;
+  /* lime-200 */
+  --color-brand-tertiary-hover: #ecfccb;
+  /* lime-100 */
+
+  /* Neutral Tokens */
+  --color-neutral-default: #f3f4f6;
+  /* gray-100 */
+  --color-neutral-hover: #e5e7eb;
+  /* gray-200 */
+  --color-neutral-secondary: #d1d5db;
+  /* gray-300 */
+  --color-neutral-secondary-hover: #9ca3af;
+  /* gray-400 */
+  --color-neutral-tertiary: #6b7280;
+  /* gray-500 */
+  --color-neutral-tertiary-hover: #4b5563;
+  /* gray-600 */
+
+  /* Success Tokens */
+  --color-success-default: #84cc16;
+  /* lime-500 */
+  --color-success-hover: #a3e635;
+  /* lime-400 */
+  --color-success-secondary: #65a30d;
+  /* lime-600 */
+  --color-success-secondary-hover: #bef264;
+  /* lime-300 */
+  --color-success-tertiary: #1a2e05;
+  /* very dark green */
+  --color-success-tertiary-hover: #ecfccb;
+  /* lime-100 */
+
+  /* Warning Tokens */
+  --color-warning-default: #f59e0b;
+  /* amber-500 */
+  --color-warning-hover: #d97706;
+  /* amber-600 */
+  --color-warning-secondary: #b45309;
+  /* amber-700 */
+  --color-warning-secondary-hover: #92400e;
+  /* amber-800 */
+  --color-warning-tertiary: #fde68a;
+  /* amber-200 */
+  --color-warning-tertiary-hover: #fef3c7;
+  /* amber-100 */
+
+  /* Danger Tokens */
+  --color-danger-default: #ef4444;
+  /* red-500 */
+  --color-danger-hover: #dc2626;
+  /* red-600 */
+  --color-danger-secondary: #b91c1c;
+  /* red-700 */
+  --color-danger-secondary-hover: #991b1b;
+  /* red-800 */
+  --color-danger-tertiary: #fecaca;
+  /* red-200 */
+  --color-danger-tertiary-hover: #fee2e2;
+  /* red-100 */
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+}

@@ -1,0 +1,5 @@
+---
+include:
+  - project: 'empresas-cmpc/devops-services/pipelines/frontend-js-vite-cdn'
+    ref: master
+    file: 'gitlab-ci-template.yml'
