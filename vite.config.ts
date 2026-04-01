@@ -8,6 +8,27 @@ import { defineConfig, loadEnv } from 'vite';
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '..', '');
 
+  const usabilityMetricsEntry =
+    env.USABILITY_METRICS_MF_URI || 'http://localhost:5005/remoteEntry.js';
+
+  const remotes: Record<string, { type: 'module'; name: string; entry: string }> = {};
+
+  if (env.MF_CONTAINERS_URI) {
+    remotes['mf-containers'] = {
+      type: 'module',
+      name: 'mf-containers',
+      entry: env.MF_CONTAINERS_URI,
+    };
+  }
+
+  if (usabilityMetricsEntry) {
+    remotes['usability_metrics_mf'] = {
+      type: 'module',
+      name: 'usability_metrics_mf',
+      entry: usabilityMetricsEntry,
+    };
+  }
+
   return {
     envDir: '..',
 
@@ -17,18 +38,7 @@ export default defineConfig(({ mode }) => {
       federation({
         name: 'appShell',
         dts: false,
-        remotes: {
-          'mf-containers': {
-            type: 'module',
-            name: 'mf-containers',
-            entry: env.MF_CONTAINERS_URI,
-          },
-          'usability_metrics_mf': {
-            type: 'module',
-            name: 'usability_metrics_mf',
-            entry: env.USABILITY_METRICS_MF_URI || 'http://localhost:5005/remoteEntry.js',
-          },
-        },
+        remotes,
         shared: {
           react: { singleton: true },
           'react-dom': { singleton: true },
