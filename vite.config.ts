@@ -6,7 +6,7 @@ import react from '@vitejs/plugin-react';
 import { defineConfig, loadEnv } from 'vite';
 
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, '..', '');
+  const env = loadEnv(mode, process.cwd(), '');
 
   const usabilityMetricsEntry =
     env.USABILITY_METRICS_MF_URI || 'http://localhost:5005/remoteEntry.js';
@@ -30,7 +30,7 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
-    envDir: '..',
+    envDir: '.',
 
     plugins: [
       react(),
@@ -62,6 +62,12 @@ export default defineConfig(({ mode }) => {
       port: +env.APP_PORT,
       strictPort: true,
       allowedHosts: ['cmpc-shell-production.up.railway.app', 'localhost'],
+    },
+    define: {
+      'import.meta.env.VITE_BYPASS_AUTH': JSON.stringify(env.VITE_BYPASS_AUTH),
+      'import.meta.env.VITE_AZURE_CLIENT_ID': JSON.stringify(env.VITE_AZURE_CLIENT_ID),
+      'import.meta.env.VITE_AZURE_TENANT_ID': JSON.stringify(env.VITE_AZURE_TENANT_ID),
+      'import.meta.env.VITE_AZURE_REDIRECT_URI': JSON.stringify(env.VITE_AZURE_REDIRECT_URI),
     },
     build: { target: 'esnext' },
   };
