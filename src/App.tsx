@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 /* Project */
 import PrivateRoute from '@/wrappers/PrivateRoute.tsx';
 import Loader from '@/components/loader/Loader.tsx';
+import ErrorCard from '@/components/error-card/ErrorCard.tsx';
 import Unauthorized from '@/components/pages/unauthorized/Unauthorized.tsx';
 import NotFound from '@/components/pages/not-found/NotFound.tsx';
 import ShellLayout from './components/shell/ShellLayout.tsx';
@@ -15,8 +16,30 @@ type Mf1AppProps = {
   session: Session;
 };
 
+/**
+ * Dynamically import `mf-containers/App` at runtime only.
+ *
+ * Using a computed string (`moduleName`) prevents Rollup from statically
+ * analysing the specifier during the build, so the build succeeds even when
+ * the `mf-containers` remote is not registered (i.e. MF_CONTAINERS_URI is
+ * not set).  At runtime the Module-Federation runtime resolves the specifier;
+ * if the remote is unavailable the promise rejects and the error boundary /
+ * fallback component is shown instead of crashing the shell.
+ */
+const MF_CONTAINERS_MODULE = 'mf-containers/App';
+
 const Mf1App = React.lazy(
-  () => import('mf-containers/App') as Promise<{ default: React.ComponentType<Mf1AppProps> }>,
+  () =>
+    import(/* @vite-ignore */ MF_CONTAINERS_MODULE).catch(() => ({
+      default: function MfContainersUnavailable() {
+        return (
+          <ErrorCard
+            title="Módulo no disponible"
+            message="El módulo mf-containers no está disponible en este momento. Por favor, inténtelo más tarde."
+          />
+        );
+      },
+    })) as Promise<{ default: React.ComponentType<Mf1AppProps> }>,
 );
 
 const UsabilityDashboard = React.lazy(
